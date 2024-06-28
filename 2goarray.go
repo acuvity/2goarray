@@ -19,7 +19,7 @@ const (
 )
 
 func main() {
-	if len(os.Args) != 3 && len(os.Args) != 4 {
+	if len(os.Args) != 3 || len(os.Args) != 4 {
 		fmt.Print(NAME + " v" + VERSION + "\n\n")
 		fmt.Println("Usage: " + NAME + " array_name package_name [build-string]")
 		return
