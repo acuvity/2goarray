@@ -32,7 +32,8 @@ func generate(packageName, varName, buildFlags string, data []byte) string {
 	}
 	output += fmt.Sprintf(GENERATED_BY + "\n\n")
 	output += fmt.Sprintf("package %s\n\n", packageName)
-	output += fmt.Sprintf("var %s []byte = []byte{", varName)
+	output += fmt.Sprintf("// %s stores the bytes for the icon\n", varName)
+	output += fmt.Sprintf("var %s = []byte{", varName)
 	for n := 0; n < len(data); n++ {
 		if n%12 == 0 {
 			output += "\n\t"
