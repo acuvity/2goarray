@@ -42,7 +42,7 @@ func generate(packageName, varName, buildFlags string, data []byte) string {
 		}
 		output += fmt.Sprintf("0x%02x,", data[n])
 	}
-	output += "\n}\n\n"
+	output += "\n}\n"
 	return output
 }
 
