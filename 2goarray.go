@@ -37,8 +37,10 @@ func generate(packageName, varName, buildFlags string, data []byte) string {
 	for n := 0; n < len(data); n++ {
 		if n%12 == 0 {
 			output += "\n\t"
+		} else {
+			output += " "
 		}
-		output += fmt.Sprintf("0x%02x, ", data[n])
+		output += fmt.Sprintf("0x%02x,", data[n])
 	}
 	output += "\n}\n\n"
 	return output
